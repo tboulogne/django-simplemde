@@ -1,18 +1,18 @@
 # A markdown editor(with preview) for Django
-Use markdown editor https://github.com/NextStepWebs/simplemde-markdown-editor in django project, this project is inspired by https://github.com/douglasmiranda/django-wysiwyg-redactor/ 
+Use markdown editor https://github.com/NextStepWebs/inscrybmde-markdown-editor in django project, this project is inspired by https://github.com/douglasmiranda/django-wysiwyg-redactor/ 
 
 # Getting started
-* install django-simplemde
+* install django-inscrybmde
 ```
-pip install django-simplemde
+pip install django-inscrybmde
 ```
 
-* add 'simplemde' to INSTALLED_APPS.
+* add 'inscrybmde' to INSTALLED_APPS.
 
 ```python
 INSTALLED_APPS = (
     # ...
-    'simplemde',
+    'inscrybmde',
     # ...
 )
 ```
@@ -20,18 +20,18 @@ INSTALLED_APPS = (
 # Using in models
 ```python
 from django.db import models
-from simplemde.fields import SimpleMDEField
+from inscrybmde.fields import InscrybMDEField
 
 class Entry(models.Model):
     title = models.CharField(max_length=250, verbose_name=u'Title')
-    content = SimpleMDEField(verbose_name=u'mardown content')
+    content = InscrybMDEField(verbose_name=u'mardown content')
 ```
 
-# SimpleMDE options
-You could set SimpleMDE options in settings.py like this:
+# InscrybMDE options
+You could set InscrybMDE options in settings.py like this:
 
 ```python
-SIMPLEMDE_OPTIONS = {
+INSCRYBMDE_OPTIONS = {
     'placeholder': 'haha',
     'status': False,
     'autosave': {
@@ -40,14 +40,14 @@ SIMPLEMDE_OPTIONS = {
 }
 ```
 
-Right now this plugin supports [SimpleMDE Configurations](https://github.com/NextStepWebs/simplemde-markdown-editor#configuration), but only the static ones(don't support js configurations like ```previewRender```)
+Right now this plugin supports [InscrybMDE Configurations](https://github.com/NextStepWebs/inscrybmde-markdown-editor#configuration), but only the static ones(don't support js configurations like ```previewRender```)
 
 ***for autosave option, you dont need to set it, this plugin will generate uniqueId with python's uuid.uuid4 automatically***
 
-# Get SimpleMDE instance from DOM
+# Get InscrybMDE instance from DOM
 
-After SimpleMDE initialized, you could get SimpleMDE instance from dom element like this:
+After InscrybMDE initialized, you could get InscrybMDE instance from dom element like this:
 
 ```javascript
-$('.simplemde-box')[0].SimpleMDE
+$('.inscrybmde-box')[0].InscrybMDE
 ```

@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'markdown',
-    'simplemde',
+    'inscrybmde',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,7 +103,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SIMPLEMDE_OPTIONS = {
+INSCRYBMDE_OPTIONS = {
     'placeholder': 'Do you fancy Markdown?',
     'spellChecker': False,
     'status': False,

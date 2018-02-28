@@ -13,13 +13,13 @@ except ImportError:
 from .utils import json_dumps
 
 
-GLOBAL_OPTIONS = getattr(settings, 'SIMPLEMDE_OPTIONS', {})
+GLOBAL_OPTIONS = getattr(settings, 'INSCRYBMDE_OPTIONS', {})
 
 
-class SimpleMDEEditor(widgets.Textarea):
+class InscrybMDEEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
-        self.custom_options = kwargs.pop('simplemde_options', {})
-        super(SimpleMDEEditor, self).__init__(*args, **kwargs)
+        self.custom_options = kwargs.pop('inscrybmde_options', {})
+        super(InscrybMDEEditor, self).__init__(*args, **kwargs)
 
     @property
     def options(self):
@@ -33,23 +33,23 @@ class SimpleMDEEditor(widgets.Textarea):
         if 'class' not in attrs.keys():
             attrs['class'] = ''
 
-        attrs['class'] += ' simplemde-box'
+        attrs['class'] += ' inscrybmde-box'
 
-        attrs['data-simplemde-options'] = json_dumps(self.options)
+        attrs['data-inscrybmde-options'] = json_dumps(self.options)
 
-        html = super(SimpleMDEEditor, self).render(name, value, attrs)
+        html = super(InscrybMDEEditor, self).render(name, value, attrs)
 
         return mark_safe(html)
 
     def _media(self):
         js = (
-            'simplemde/simplemde.min.js',
-            'simplemde/simplemde.init.js'
+            'inscrybmde/inscrybmde.min.js',
+            'inscrybmde/inscrybmde.init.js'
         )
 
         css = {
             'all': (
-                'simplemde/simplemde.min.css',
+                'inscrybmde/inscrybmde.min.css',
             )
         }
         return forms.Media(css=css, js=js)

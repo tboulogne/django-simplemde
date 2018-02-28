@@ -6,15 +6,15 @@ readme = f.read()
 f.close()
 
 setup(
-    name='django-simplemde',
-    version='0.1.1',
-    description='django-simplemde is a WYSIWYG markdown editor for Django',
+    name='django-inscrybmde',
+    version='0.1',
+    description='django-inscrybmde is a WYSIWYG markdown editor for Django',
     long_description=readme,
-    author="Siyuan Zhang",
+    author="Siyuan Zhang, Thierry BOULOGNE",
     author_email='onepill@gmail.com',
-    url='https://github.com/onepill/django-simplemde',
+    url='https://github.com/tboulogne/django-inscrybmde',
     license='MIT',
-    packages=['simplemde'],
+    packages=['inscrybmde'],
     include_package_data=True,
     install_requires=['setuptools'],
     zip_safe=False,
@@ -27,5 +27,5 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
     ],
-    keywords='django,admin,wysiwyg,markdown,editor,simplemde',
+    keywords='django,admin,wysiwyg,markdown,editor,inscrybmde',
 )
