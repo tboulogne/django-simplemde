@@ -1,5 +1,5 @@
 # A markdown editor(with preview) for Django
-Use markdown editor https://github.com/NextStepWebs/inscrybmde-markdown-editor in django project, this project is inspired by https://github.com/douglasmiranda/django-wysiwyg-redactor/ 
+Use markdown editor https://github.com/Inscryb/inscryb-markdown-editor in django project, this project is inspired by https://github.com/douglasmiranda/django-wysiwyg-redactor/ 
 
 # Getting started
 * install django-inscrybmde
